@@ -1,4 +1,5 @@
 Summary:	kFlickr - standalone Flickr.com uploader for KDE
+Summary(pl):	kFlickr - samodzielne narzêdzie dla KDE do przesy³ania danych na Flickr.com
 Name:		kflickr
 Version:	0.5
 Release:	1
@@ -27,6 +28,21 @@ following features:
 - batch editing of photos
 - proxy server support
 - support for JPG, PNG and (non-animated) GIF photo formats
+
+%description -l pl
+kFlickr to samodzielna aplikacja KDE pozwalaj±ca na ³atwe przesy³anie
+ulubionych zdjêæ na konto Flickr.com. kFlickr daje nastêpuj±ce
+mo¿liwo¶ci:
+- przeci±ganie z innych aplikacji (takich jak Konqueror czy DIgiKam)
+- ³atw± zmianê w³a¶ciwo¶ci zdjêæ (tytu³u, opisu, danych prywatnych,
+  znaczników)
+- dostêp do listy znaczników Flickr.com
+- obs³ugê wiêcej ni¿ jednego u¿ytkownika
+- podgl±d obrazów
+- obs³ugê nowego uwierzytelnienia Flickr.com
+- wsadowe modyfikowanie zdjêæ
+- obs³ugê serwera proxy
+- obs³ugê formatów zdjêæ JPG, PNG i (nie animowanego) GIF
 
 %prep
 %setup -q
