@@ -1,12 +1,12 @@
 Summary:	kFlickr - standalone Flickr.com uploader for KDE
 Summary(pl):	kFlickr - samodzielne narzêdzie dla KDE do przesy³ania danych na Flickr.com
 Name:		kflickr
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kflickr/%{name}-%{version}.tar.bz2
-# Source0-md5:	d8f89f9cdaa60e853b12b866b0e2425c
+# Source0-md5:	62a0d79e96c82454a19f2b563f2ebebf
 Patch0:		%{name}-desktop.patch
 URL:		http://kflickr.sourceforge.net/
 BuildRequires:	kdelibs-devel >= 9:3.2
@@ -44,9 +44,22 @@ mo¿liwo¶ci:
 - obs³ugê serwera proxy
 - obs³ugê formatów zdjêæ JPG, PNG i (nie animowanego) GIF
 
+%package devel
+Summary:	Development files for kflickrpart library
+Summary(pl):	Pliki rozwojowe biblioteki kflickrpart
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Requires:	kdelibs-devel >= 9:3.2
+
+%description devel
+Development files for kflickrpart library
+
+%description devel -l pl
+Pliki rozwojowe biblioteki kflickrpart
+
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p0
 
 %build
 %configure \
@@ -75,6 +88,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_bindir}/kflickr
-%{_datadir}/apps/kflickr
+%attr(755,root,root) %{_libdir}/kde3/*.so
+%{_datadir}/apps/kflickr*
 %{_iconsdir}/hicolor/*/*/*.png
 %{_desktopdir}/*.desktop
+%{_mandir}/man1/kflickr*
+%{_datadir}/apps/konqueror/servicemenus/kflickr_servicemenu.desktop
+%{_datadir}/services/kflickrpart.desktop
+
+%files devel
+%defattr(644,root,root,755)
+%{_libdir}/kde3/*.la
