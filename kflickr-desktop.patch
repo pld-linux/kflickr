@@ -1,17 +1,19 @@
-diff -urN kflickr-0.5/src/kflickr.desktop kflickr-0.5.new/src/kflickr.desktop
---- kflickr-0.5/src/kflickr.desktop	2005-09-15 04:03:03.000000000 +0200
-+++ kflickr-0.5.new/src/kflickr.desktop	2006-02-03 18:26:24.000000000 +0100
-@@ -1,8 +1,10 @@
+--- src/kflickr.desktop.orig	2006-07-06 05:00:33.000000000 +0200
++++ src/kflickr.desktop	2006-07-06 12:16:16.427611664 +0200
+@@ -1,12 +1,12 @@
  [Desktop Entry]
  Encoding=UTF-8
  Name=kFlickr
 -Name[xx]=xxkflickrxx
+ Comment=A standalone Flickr uploader for KDE
+ Comment[de]=Ein Standalone Flickr.com Uploader für KDE
+ Comment[fr]=Une application d'envoi de photos sur Flickr
+-Comment[xx]=xxA standalone Flickr uploader for KDExx
++Comment[pl]=kFlickr przesyÅa obrazy do Flickr.com
  Exec=kflickr
 -Icon=kflickr
 +Icon=kflickr.png
  Type=Application
--Comment=A standalone Flickr uploader for KDE
-+Comment=kFlickr uploads photos to Flickr.com 
-+Comment[pl]=kFlickr przesyÅ‚a obrazy do Flickr.com
+-Categories=KDE;Graphics;Photography;Network;FileTransfer;
 +Terminal=false
 +Categories=Qt;KDE;Graphics;
