@@ -44,19 +44,6 @@ mo¿liwo¶ci:
 - obs³ugê serwera proxy
 - obs³ugê formatów zdjêæ JPG, PNG i (nie animowanego) GIF
 
-%package devel
-Summary:	Development files for kflickrpart library
-Summary(pl):	Pliki rozwojowe biblioteki kflickrpart
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-Requires:	kdelibs-devel >= 9:3.2
-
-%description devel
-Development files for kflickrpart library
-
-%description devel -l pl
-Pliki rozwojowe biblioteki kflickrpart
-
 %prep
 %setup -q
 %patch0 -p0
@@ -89,13 +76,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README
 %attr(755,root,root) %{_bindir}/kflickr
 %attr(755,root,root) %{_libdir}/kde3/*.so
+%{_libdir}/kde3/*.la
 %{_datadir}/apps/kflickr*
 %{_iconsdir}/hicolor/*/*/*.png
 %{_desktopdir}/*.desktop
 %{_mandir}/man1/kflickr*
 %{_datadir}/apps/konqueror/servicemenus/kflickr_servicemenu.desktop
 %{_datadir}/services/kflickrpart.desktop
-
-%files devel
-%defattr(644,root,root,755)
-%{_libdir}/kde3/*.la
