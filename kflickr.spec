@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/kflickr/%{name}-%{version}.tar.bz2
 # Source0-md5:	62a0d79e96c82454a19f2b563f2ebebf
 Patch0:		%{name}-desktop.patch
 URL:		http://kflickr.sourceforge.net/
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 9:3.2
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,6 +50,7 @@ mo¿liwo¶ci:
 %patch0 -p0
 
 %build
+cp -f /usr/share/automake/config.sub admin
 %configure \
 	--with-qt-libraries=%{_libdir}
 
