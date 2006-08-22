@@ -14,6 +14,9 @@ BuildRequires:	kdelibs-devel >= 9:3.2
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# kde packages & __cc with spaces don't work
+%undefine	with_ccache
+
 %description
 kFlickr is a standalone KDE application that allows for easy upload of
 your favourite photos to your Flickr.com account. kFlickr provides the
