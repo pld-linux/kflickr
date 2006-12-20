@@ -1,15 +1,13 @@
---- src/kflickr.desktop.orig	2006-07-06 05:00:33.000000000 +0200
-+++ src/kflickr.desktop	2006-07-06 12:16:16.427611664 +0200
-@@ -1,12 +1,12 @@
- [Desktop Entry]
- Encoding=UTF-8
- Name=kFlickr
+--- ./src/kflickr.desktop	2006-07-06 12:16:16.427611664 +0200
++++ kflickr-0.7/src/kflickr.desktop	2006-12-20 02:14:57.854262740 +0200
+@@ -4,9 +4,9 @@
 -Name[xx]=xxkflickrxx
  Comment=A standalone Flickr uploader for KDE
- Comment[de]=Ein Standalone Flickr.com Uploader für KDE
+-Comment[de]=Ein Standalone Flickr.com Uploader für KDE
++Comment[de]=Ein Standalone Flickr.com Uploader fÃ¼r KDE
  Comment[fr]=Une application d'envoi de photos sur Flickr
 -Comment[xx]=xxA standalone Flickr uploader for KDExx
-+Comment[pl]=kFlickr przesyÅa obrazy do Flickr.com
++Comment[pl]=kFlickr przesyÃ…a obrazy do Flickr.com
  Exec=kflickr
 -Icon=kflickr
 +Icon=kflickr.png
