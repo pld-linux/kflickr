@@ -1,5 +1,5 @@
 Summary:	kFlickr - standalone Flickr.com uploader for KDE
-Summary(pl.UTF-8):   kFlickr - samodzielne narzędzie dla KDE do przesyłania danych na Flickr.com
+Summary(pl.UTF-8):	kFlickr - samodzielne narzędzie dla KDE do przesyłania danych na Flickr.com
 Name:		kflickr
 Version:	0.7
 Release:	2
