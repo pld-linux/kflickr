@@ -8,7 +8,9 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kflickr/%{name}-%{version}.tar.bz2
 # Source0-md5:	de06d62d9998379302af2fa96aebd19f
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-am110.patch
 URL:		http://kflickr.sourceforge.net/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 9:3.2
 BuildRequires:	rpmbuild(macros) >= 1.129
@@ -51,12 +53,16 @@ możliwości:
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 %build
-cp -f /usr/share/automake/config.sub admin
+%{__make} -f admin/Makefile.common cvs
 %configure \
+%if "%{_lib}" == "lib64"
+	--enable-libsuffix=64 \
+%endif
+	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
-
 %{__make}
 
 %install
