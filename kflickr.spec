@@ -1,14 +1,13 @@
 Summary:	kFlickr - standalone Flickr.com uploader for KDE
 Summary(pl.UTF-8):	kFlickr - samodzielne narzędzie dla KDE do przesyłania danych na Flickr.com
 Name:		kflickr
-Version:	0.8
+Version:	0.9
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/kflickr/%{name}-%{version}.tar.bz2
-# Source0-md5:	de06d62d9998379302af2fa96aebd19f
+# Source0-md5:	3bbd76d3723e569f73419681d7b7f296
 Patch0:		%{name}-desktop.patch
-Patch1:		%{name}-am110.patch
 URL:		http://kflickr.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,7 +52,6 @@ możliwości:
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p0
 
 %build
 %{__make} -f admin/Makefile.common cvs
